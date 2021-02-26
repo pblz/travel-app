@@ -29,6 +29,7 @@ p {
     background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
 }
 
+
 header {
     background-color: black;
     display: flex;
@@ -84,6 +85,8 @@ footer {
     display: flex;
     background-color: black;
     color:white;
+    flex-direction: row;
+    flex-wrap: wrap;
     
 }
 .inspire {
@@ -112,6 +115,23 @@ footer {
 #la{
     object-fit: cover;
 }
+
+.results-box{
+    padding-left:10px;
+        display: flex;
+        flex-direction: column;
+        grid-area: auth;
+        margin: 10px;
+        max-width: 30%;
+        max-height: 30%;
+
+        img{
+            width:auto;
+            height:auto;
+            border-radius:10px;
+          }
+}    
+
 .insp-info{
 padding-left:10px;
     display: flex;
@@ -120,11 +140,6 @@ padding-left:10px;
     margin: 10px;
     width: 30%;
     justify-content: space-between;
-
-    img {
-        height: 80%;
-        width:auto;
-      }
     
     .insp-element {
         padding:22px;
