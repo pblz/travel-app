@@ -1,0 +1,130 @@
+
+//The main layout is flex, it has header, body, footer 
+//within body: main, media
+
+$def-padding:40px;
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand';
+    font-weight: 300;
+    //background-image: url('');
+    padding:0;
+    margin:0;
+    min-height: 100vh;
+    max-height: 100vh;
+  
+}
+
+p {
+    padding: $def-padding;
+}
+
+.pic{
+    max-height:600px;
+    background-repeat: repeat;
+    background-color: black;
+    background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+}
+
+header {
+    background-color: black;
+    display: flex;
+    //justify-content: space-between;
+    flex-direction: row;
+    padding: 12px;
+    max-height: 30px;
+}
+
+.title {
+    display: flex;
+    //justify-content: space-between;
+    flex-direction: row;
+    padding: $def-padding;
+
+}
+
+footer {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    height:20px;
+    padding: 12px;
+    background-color: black;
+}
+
+.teaser {
+    flex:4;
+    flex-flow: row wrap;
+    min-height: 50vh;
+}
+
+.container {
+    display: flex;
+
+}
+
+.teaser2 {
+    flex:1;
+}
+
+
+.media {
+    display: flex;
+    background-color: black;
+    color:white;
+    
+}
+.inspire {
+    color:white;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: thick;
+    display: flex;
+    flex:2 100%;
+    background-color: black;
+    
+}
+
+#input-form {
+    border-color: aqua;
+    border-width: 60px;
+    border-radius:19px;
+    padding: 12px;
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    max-height: 200px;
+    flex-flow: row wrap;    
+}
+
+
+form {
+    label{
+        flex: 100%;
+        margin: 6px;
+        margin-bottom:0;
+    }
+    input{
+        border-style: solid;
+        font-family: 'Quicksand';
+        padding: 6px;
+        margin: 6px;
+        margin-top: 0px;
+        flex: 100%;
+        border-radius:6px;
+        border-width: thin;
+    }    
+    button{
+        border: none;
+        border-radius:6px;
+        margin: 6px;
+        padding: 6px;
+        background-color: aqua;
+        flex: 100%
+    }
+    
+}
+
