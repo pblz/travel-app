@@ -10,39 +10,65 @@
 
 <body>
     <header>Header</header>
-  
 
     <section class='pic'>
-            <section>
-                    <h1 class="title"> TravelApp </h1>
-                    <p>No travels due to Covid? No problem. <br>
-                        Explore locations virtually.</p>
-                </section>
-            <main class='container'>
-                    <div></div>
-                    <section class='teaser'>
-                        .
-                    </section>
-            
-                    <form id='input-form'>
-                        <label id='input-label' for="destination">Enter a destination</label>
-                        <input type="text" id="destination" name="destination">
-                        <label for="start">Enter a start date</label>
-                        <input type="date" id="tripdate" name="trip-start" value="2020-07-03" min="2020-01-02" max="2033-12-31">
-            
-                        <button id="submit" onClick="Client.handleClick(event)">Submit</button>
-                    </form>
-                    <section class='teaser2'>
-                    </section>
-            
-                </main>
+        <section>
+            <h1 class="title"> </h1>
+        </section>
+        <main class='container'>
+            <div></div>
+            <section class='teaser'>
+                .
+            </section>
+
+            <form id='input-form'>
+                <label id='input-label' for="destination">Enter a destination</label>
+                <input type="text" id="destination" name="destination">
+                <label for="start">Enter a start date</label>
+                <input type="date" id="tripdate" name="trip-start" value="2020-07-03" min="2020-01-02" max="2033-12-31">
+
+                <button id="submit" onClick="Client.handleClick(event)">Submit</button>
+            </form>
+
+            <section class='teaser2'>
+            </section>
+
+        </main>
+
     </section>
-  
-    <section class='inspire'>
-            <p>Not sure where to go? Browse our favorite destinations below:</p>
+    <section class='main-text'>
+        <p>No travels due to Covid? No problem.
+            <br> With us you can explore locations virtually.</p>
     </section>
     <section class='media'>
     </section>
+    <section class='inspire'>
+        <p>Browse our favorite destinations below:</p>
+    </section>
+    <container class='card-holder'>
+        <div class='insp-info' id='la'>
+            Los Angeles
+            <img src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg')>
+
+        </div>
+                <div class='insp-info' id='copenhagen'>
+                        Copenhagen
+                        <img src='https://cdn.pixabay.com/photo/2018/08/14/20/36/mini-europe-3606552_960_720.jpg')>
+                   
+                </div>
+
+       
+        <div class='insp-info'id='rio'>
+                Rio de janeiro
+                <img src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg')>
+                    </div>
+                    <div class='insp-info'id='rio'>
+                            Rio de janeiro
+                            <img src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg')>
+                                </div>
+    </container>
+
 </body>
 <footer>Footer</footer>
+
 </html>

@@ -2,7 +2,7 @@
 //The main layout is flex, it has header, body, footer 
 //within body: main, media
 
-$def-padding:40px;
+$def-padding:10px;
 
 body {
     display: flex;
@@ -14,15 +14,16 @@ body {
     margin:0;
     min-height: 100vh;
     max-height: 100vh;
-  
 }
 
 p {
     padding: $def-padding;
+    padding-left:$def-padding*2;
 }
 
 .pic{
     max-height:600px;
+    min-height:70vh;
     background-repeat: repeat;
     background-color: black;
     background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
@@ -39,6 +40,7 @@ header {
 
 .title {
     display: flex;
+    min-height: 170px;
     //justify-content: space-between;
     flex-direction: row;
     padding: $def-padding;
@@ -69,7 +71,15 @@ footer {
     flex:1;
 }
 
-
+.main-text{
+    font-size: 40px;
+    background-color: black;
+    color:white;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: thin;
+    height: auto;
+}
 .media {
     display: flex;
     background-color: black;
@@ -78,13 +88,67 @@ footer {
 }
 .inspire {
     color:white;
-    border-bottom-style: solid;
-    border-color: white;
-    border-width: thick;
     display: flex;
-    flex:2 100%;
     background-color: black;
     
+}
+.card-holder {
+    display: flex;
+    flex:2 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: black;
+    color:white;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: thin;
+}
+
+#copenhagen {
+    background-image: url();
+}
+
+#la{
+    object-fit: cover;
+}
+.insp-info{
+padding-left:10px;
+    display: flex;
+    flex-direction: column;
+    grid-area: auth;
+    margin: 10px;
+    width: 30%;
+    justify-content: space-between;
+
+    img {
+        height: 80%;
+        width:auto;
+      }
+    
+    .insp-element {
+        padding:22px;
+        align-self: flex-end;
+        flex-direction: row;
+        color:black;
+        background-color: rgba(255,255,255,0.8);
+      }
+  }
+  
+  .insp-info img{
+    width:100%;
+    border-radius:10px;
+
+  }
+  
+  .insp-info figcaption{
+    text-align: end
+  }
+  
+
+#placeholder{
+    height: 0;
+    flex:0;
 }
 
 #input-form {
@@ -99,7 +163,6 @@ footer {
     max-height: 200px;
     flex-flow: row wrap;    
 }
-
 
 form {
     label{
