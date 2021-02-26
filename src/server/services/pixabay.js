@@ -5,6 +5,9 @@ const fetch = require('node-fetch');
  const pixabay = async (keyword, baseUrl, apiKey) => {
     console.log("::: Fetching Pics :::")
 
+    //TODO: HTML encode input so it's processable by the API
+
+
     const url = baseUrl + '?q='+ keyword + '&image_type=photo&per_page=20&key=' + apiKey; 
     console.log(url);
 

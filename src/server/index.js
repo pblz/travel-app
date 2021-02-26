@@ -78,6 +78,17 @@ app.get('/pictures', async function (req, res) {
     res.send("error")
 })
 
+app.post('/pictures', async function (req, res) {
+    try {
+        const keyword = req.body.keyword;
+        const ans = await pixabay(keyword, pixabayUrl, PIXABAY_APIKEY );
+        return res.send(ans);
+    } catch (error) {
+        console.log("error", error);
+    }
+    res.send("error")
+})
+
 
 app.post('/weather', function (req, res) {
     res.json(weather());

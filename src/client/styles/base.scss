@@ -21,6 +21,15 @@ p {
     padding-left:$def-padding*2;
 }
 
+
+.weather {
+    flex:60%;
+    color:white;
+    min-height: 150px;
+    padding:50px;
+    font-size:40px;
+}
+
 .pic{
     max-height:600px;
     min-height:70vh;
@@ -65,7 +74,11 @@ footer {
 
 .container {
     display: flex;
-
+}
+.result-container {
+    display: flex;
+    background-color: black;
+    align-content: center
 }
 
 .teaser2 {
@@ -80,6 +93,7 @@ footer {
     border-color: white;
     border-width: thin;
     height: auto;
+    padding: 20px;
 }
 .media {
     display: flex;
@@ -93,6 +107,7 @@ footer {
     color:white;
     display: flex;
     background-color: black;
+    font-size: 30px;
     
 }
 .card-holder {
@@ -203,6 +218,26 @@ form {
         background-color: aqua;
         flex: 100%
     }
-    
 }
+
+
+.result-form {
+    display:flex;
+    flex-direction: column;
+    flex:30%;
+    padding:30px;
+
+    button{
+        border: aqua solid thin;
+        border-radius:6px;
+        margin: 12px;
+        padding: 12px;
+        background-color: black;
+        color: white;
+        flex: 100%;
+        max-height:20%;
+        min-height: fit-content
+    }
+}
+
 

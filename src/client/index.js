@@ -10,11 +10,15 @@ import './styles/base.scss'
 
 document.getElementById('submit').addEventListener('click', updatePics);
 
+function triggerReload(){
+    location.reload();
+}
 
 export {
     handleClick,
     updateUI,
     postData,
     getData,
-    updatePics
+    updatePics,
+    triggerReload
 }
