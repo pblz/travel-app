@@ -211,12 +211,17 @@ form {
         border-width: thin;
     }    
     button{
+        color: rgb(0,0,23);
         border: none;
         border-radius:6px;
         margin: 6px;
         padding: 6px;
         background-color: aqua;
         flex: 100%
+    }
+    button:hover{
+        color: rgb(0,0,0);
+        background-color: aquamarine
     }
 }
 
@@ -237,6 +242,10 @@ form {
         flex: 100%;
         max-height:20%;
         min-height: fit-content
+    }
+
+    button:hover{
+        background-color: aqua;
     }
 }
 

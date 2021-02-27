@@ -3,7 +3,7 @@ import { updateUI } from './js/updateUI'
 import { postData } from './js/postData'
 import { getData } from './js/getData'
 import { updatePics } from './js/populateInspiration'
-
+import { withinWeek } from './js/withinWeek'
 
 import './styles/base.scss'
 
@@ -20,5 +20,6 @@ export {
     postData,
     getData,
     updatePics,
-    triggerReload
+    triggerReload,
+    withinWeek
 }

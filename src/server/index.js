@@ -55,12 +55,41 @@ app.get('/weather', async function (req, res) {
     res.send("error")
 })
 
+app.post('/weather', async function (req, res) {
+    try {
+        const lng = req.body.lng;
+        const lat = req.body.lat;
+        const weather = await getWeather(lng, lat, weatherUrl, WEATHERBIT_APIKEY);
+        return res.send(weather);
+    } catch (error) {
+        console.log("error", error);
+    }
+    res.send("error")
+})
+
+
 
 app.get('/location', async function (req, res) {
     try {
         const city = 'Stuttgart';
         const lonlat = await getLocation(city, geonamesUrl, GEONAMES_USERNAME );
         return res.send(lonlat);
+    } catch (error) {
+        console.log("error", error);
+    }
+    res.send("error")
+})
+
+app.post('/location', async function (req, res) {
+    try {
+        console.log("::: Received Geo Post:::"); 
+
+        const city = req.body.keyword;
+        const data = await getLocation(city, geonamesUrl, GEONAMES_USERNAME );
+        console.log(data.geonames[0].lng);
+        console.log(data.geonames[0].lat);
+
+        return res.json(data.geonames[0]);
     } catch (error) {
         console.log("error", error);
     }

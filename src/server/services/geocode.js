@@ -9,9 +9,10 @@ const fetch = require('node-fetch');
 
 
  const getLocation = async (destination, baseUrl, username) => {
-    console.log("::: Fetching Weather :::")
+    console.log("::: Fetching LocationData :::")
 
     const url = baseUrl + 'searchJSON?q=' + destination + '&maxRows=1&username=' + username;
+    console.log(url);
 
     const response = await fetch(url, {
         method: 'GET',
@@ -23,6 +24,11 @@ const fetch = require('node-fetch');
     try {
         console.log(response);
         const newData = await response.json();
+        console.log(newData.geonames[0]);
+        console.log(newData.geonames[0].lng);
+        console.log(newData.geonames[0].lat);
+
+
         return newData;
     } catch (error) {
         console.log("error", error);
