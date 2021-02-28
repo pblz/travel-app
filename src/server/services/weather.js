@@ -21,7 +21,6 @@ https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh,NC&key=fd91db15db9946
     });
 
     try {
-        console.log(response);
         const newData = await response.json();
         return newData;
     } catch (error) {

@@ -18,16 +18,22 @@ function updatePics() {
     var today = new Date();
     const todayTime = today.getTime();
     const startDateTime = startDate.getTime();
-    if (startDateTime < todayTime) {
+
+    var diffTime = startDateTime - todayTime;
+
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    console.log(diffTime + " milliseconds");
+    console.log(diffDays + " days");
+
+    if (diffDays < 0) {
         alert("Please enter a date that is today or later!");
         return;
     }
 
-    var diffTime = startDateTime - todayTime;
-
-                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-                console.log(diffTime + " milliseconds");
-                console.log(diffDays + " days");
+    if(diffDays > 365) {
+        alert("Please enter a date within this year!");
+        return;
+    }
 
 
     let jsonBody = {
@@ -51,13 +57,29 @@ function updatePics() {
                 //TODO
                 let weatherText = "";
 
-                
-
                 if (diffDays > 16) {
-                    alert("not yet implemented");
-                    return;
-                } else {
+                    console.log(":::WEATHER HISTORY:::")
+                    let historyJSON = {
+                        "lng": locData.lng,
+                        "lat": locData.lat,
+                        "date": startDate,
+                    };
 
+                    await Client.postData('http://localhost:8081/history', historyJSON)
+                        .then(
+                            async function (weather) {
+                                console.log(":::WEATHER :::")
+                                console.log(weather.data);
+
+                                tmp = weather.data[0].temp;
+                                //weatherDescription = weather.data[0].weather.description;
+                                console.log(tmp);
+                                //console.log(weatherDescription);
+                                weatherDescription = ("on this day in a previous year");
+
+                            })
+                    
+                } else {
                     await Client.postData('http://localhost:8081/weather', locData)
                         .then(
                             async function (weather) {
@@ -65,16 +87,12 @@ function updatePics() {
                                 console.log(weather.data);
 
                                 tmp = weather.data[diffDays].temp;
-                                weatherDescription = weather.data[0].weather.description;
+                                weatherDescription = weather.data[diffDays].weather.description;
                                 console.log(tmp);
                                 console.log(weatherDescription);
 
                             })
-                    console.log(tmp);
-                    console.log(weatherDescription);
-
-                    console.log(tmp);
-                    console.log(weatherDescription);
+                        }
                     console.log("::: Update UI:::")
 
                     // Set section with class pic to invisible for now
@@ -91,34 +109,26 @@ function updatePics() {
                     console.log(tmp);
                     console.log(weatherDescription);
                     weatherDiv.innerHTML = "Weather Forecast : " + weatherDescription + "  " + tmp + " °C";
-
                     const buttonContainer = document.createElement("div");
                     buttonContainer.classList.add('result-form');
-
-
                     const buttonSave = document.createElement("button");
                     buttonSave.innerHTML = "Save trip";
                     const buttonNewSearch = document.createElement("button");
                     buttonNewSearch.id = "new";
                     buttonNewSearch.addEventListener('click', Client.triggerReload);
-
                     buttonNewSearch.innerHTML = "Plan another";
-
-
                     const resultContainer = document.getElementById("results-container");
                     resultContainer.innerHTML = "";
                     resultContainer.classList.add("result-container");
-
                     resultContainer.appendChild(weatherDiv);
                     buttonContainer.appendChild(buttonSave);
                     buttonContainer.appendChild(buttonNewSearch);
                     resultContainer.appendChild(buttonContainer);
-                    //formText = document.getElementById('destination').value;
-                    
-                    // Client.getData('http://localhost:8081/pictures')
-                }
+                //CLOSE ELSE
+
+
                 let tags = "";
-                    let picUrl = "";
+                let picUrl = "";
                 Client.postData('http://localhost:8081/pictures', jsonBody)
 
                     .then(
