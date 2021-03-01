@@ -10,6 +10,7 @@ import { populateSavedTrips } from './js/populateSavedTrips'
 import { openTrip } from './js/openTrip'
 
 import './styles/base.scss'
+import './styles/classes.scss'
 
 
 document.getElementById('submit').addEventListener('click', updatePics);
