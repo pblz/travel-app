@@ -33,6 +33,7 @@ p {
 .pic{
     max-height:600px;
     min-height:70vh;
+    color: white;
     background-repeat: repeat;
     background-color: black;
     background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
@@ -41,11 +42,27 @@ p {
 
 header {
     background-color: black;
+    color:aliceblue;
     display: flex;
-    //justify-content: space-between;
-    flex-direction: row;
     padding: 12px;
-    max-height: 30px;
+    //max-height: 30px;
+    min-height: wrap;
+    justify-content: space-between;
+    
+    button{
+        min-height: wrap;
+        color: rgb(0,0,23);
+        border: none;
+        border-radius:6px;
+        padding: 6px;
+        padding-left:12px;
+        padding-right:12px;
+        background-color: aqua;
+    }
+
+    button:hover {
+        background-color: rgba(0,164,140,255)
+    }
 }
 
 .title {
@@ -59,11 +76,25 @@ header {
 
 footer {
     display: flex;
-    align-content: center;
     flex-direction: row;
+    justify-content: flex-end;
     height:20px;
     padding: 12px;
     background-color: black;
+    color:white;
+    img{
+        max-height: 30px;
+        width: auto;
+        padding-left: 12px;
+        background-color: white
+
+    }
+    img:hover{
+        background-color: aquamarine
+    }
+    a{
+        color:white;
+    }
 }
 
 .teaser {
@@ -86,7 +117,7 @@ footer {
 }
 
 .main-text{
-    font-size: 40px;
+    font-size: 30px;
     background-color: black;
     color:white;
     border-bottom-style: solid;
@@ -108,6 +139,8 @@ footer {
     display: flex;
     background-color: black;
     font-size: 30px;
+    padding: 20px;
+
     
 }
 .card-holder {
@@ -129,6 +162,19 @@ footer {
 
 #la{
     object-fit: cover;
+}
+
+.saved {
+    background-color: aqua;
+
+    .link{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .link:hover {
+        color:aqua;
+        cursor: pointer;
+    }
 }
 
 .results-box{
@@ -221,7 +267,7 @@ form {
     }
     button:hover{
         color: rgb(0,0,0);
-        background-color: aquamarine
+        background-color: rgba(0,164,140,255)
     }
 }
 
