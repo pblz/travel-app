@@ -1,10 +1,7 @@
 function openTrip(event){
 
-alert("opened");
-
-var target = document.getElementById(event.target.id);
-
-target.innerHTML;
+var trip = event.target.innerHTML;
+alert("TODO: Open trip view for " + trip);
 
 }
 
