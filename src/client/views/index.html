@@ -70,22 +70,25 @@
         <div class='insp-info'id='rio'>
                 Rio de janeiro
                 <img src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg')>
-                    </div>
-                  
-                    
-                   
+                    </div>   
     </container>
-
-
-
+    <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
 </body>
 
-
-
 <footer>
-        <a href= "https://pixabay.com/" > 
-    Pictures from   <img src="https://pixabay.com/static/img/logo.png">
-</a>
+       
+    Pictures from  <a href= "https://pixabay.com/" >  <img src="https://pixabay.com/static/img/logo.png">  
+</a> and
+<a href="https://unsplash.com/s/photos/news?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+    Unsplash </a> 
 </footer>
 
 </html>

@@ -45,17 +45,6 @@ app.listen(port, function () {
     console.log(`Example app listening on http://localhost:${port}!`);
 })
 
-
-app.get('/weather', async function (req, res) {
-    try {
-        const weather = await getWeather(-78.6382, 35.7796, weatherUrl, WEATHERBIT_APIKEY);
-        return res.send(weather);
-    } catch (error) {
-        console.log("error", error);
-    }
-    res.send("error")
-})
-
 app.post('/weather', async function (req, res) {
     try {
         const lng = req.body.lng;
@@ -75,18 +64,6 @@ app.post('/history', async function (req, res) {
         const date = req.body.date;
         const weather = await getWeatherHistory(lng, lat, weatherUrl, WEATHERBIT_APIKEY,date);
         return res.send(weather);
-    } catch (error) {
-        console.log("error", error);
-    }
-    res.send("error")
-})
-
-
-app.get('/location', async function (req, res) {
-    try {
-        const city = 'Stuttgart';
-        const lonlat = await getLocation(city, geonamesUrl, GEONAMES_USERNAME );
-        return res.send(lonlat);
     } catch (error) {
         console.log("error", error);
     }

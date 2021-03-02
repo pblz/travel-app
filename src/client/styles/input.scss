@@ -1,0 +1,42 @@
+
+#input-form {
+    border-color: aqua;
+    border-width: 60px;
+    border-radius:19px;
+    padding: 12px;
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    max-height: 200px;
+    flex-flow: row wrap;   
+    
+    label{
+        flex: 100%;
+        margin: 6px;
+        margin-bottom:0;
+    }
+    input{
+        border-style: solid;
+        font-family: 'Quicksand';
+        padding: 6px;
+        margin: 6px;
+        margin-top: 0px;
+        flex: 100%;
+        border-radius:6px;
+        border-width: thin;
+    }    
+    button{
+        color: rgb(0,0,23);
+        border: none;
+        border-radius:6px;
+        margin: 6px;
+        padding: 6px;
+        background-color: aqua;
+        flex: 100%
+    }
+    button:hover{
+        color: rgb(0,0,0);
+        background-color: rgba(0,164,140,255)
+    }
+}

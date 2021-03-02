@@ -1,3 +1,7 @@
+/*
+Get saved trips from localStorage and display in UI
+*/
+
 function populateSavedTrips(){
 
     //Get Element by ID
@@ -30,13 +34,8 @@ function populateSavedTrips(){
 
         inspinfo.addEventListener('click', Client.openTrip);
         cardholder.appendChild(inspinfo);
-
-
         tripElement.appendChild(cardholder);
-
-
     }
 }
-
 
 export { populateSavedTrips }
