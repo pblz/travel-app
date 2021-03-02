@@ -1,17 +1,38 @@
 $def-padding:10px;
 
-.pic{
+/* large screen*/
+ @media (min-width: 450px){
+    .pic{
     max-height:400px;
     min-height:70vh;
     color: white;
     background-repeat: repeat;
     background-color: black;
     background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+    }
+    .title {
+    display: flex;
+    min-height: 170px;
+    //justify-content: space-between;
+    flex-direction: row;
+    padding: $def-padding;
+    }
 }
+
+
+.pic{
+    max-height:300px;
+    color: white;
+    background-repeat: repeat;
+    background-color: black;
+    background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+}
+
+
 
 .title {
     display: flex;
-    min-height: 170px;
+    //min-height: 170px;
     //justify-content: space-between;
     flex-direction: row;
     padding: $def-padding;

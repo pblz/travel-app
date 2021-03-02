@@ -16,7 +16,6 @@ const weatherUrl = 'https://api.weatherbit.io/v2.0/';
 const GEONAMES_USERNAME = process.env.GEONAMES_USERNAME;
 const geonamesUrl = 'http://api.geonames.org/';
 const PIXABAY_APIKEY = process.env.PIXABAY_APIKEY;
-console.log(PIXABAY_APIKEY);
 const pixabayUrl = 'https://pixabay.com/api/';
 
 
@@ -31,11 +30,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('dist'))
 
-console.log(__dirname)
-
-
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
     res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
@@ -104,7 +99,4 @@ app.post('/pictures', async function (req, res) {
     res.send("error")
 })
 
-
-app.post('/weather', function (req, res) {
-    res.json(weather());
-})
+module.exports = app

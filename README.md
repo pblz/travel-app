@@ -3,9 +3,13 @@
 A Udacity Frontend Webdeveloper Nanodegree Project.
 
 ## Story
-You can't travel but you can dream.
-The app lets you plan virtual trips, by entering a destination, viewing the current weather forecast and browsing pictures other travellers took.
-After viewing your trip results, you are able to save favorite destinations, and revisit them even after you closed your browser window..
+You can't travel but you can dream - and visit places virtually.
+
+This app lets you plan virtual trips. 
+You enter a destination, and a start date for your trip - any date between today and the coming year will work.
+Your trip view will include the current weather forecast, or a prediction based on previous years' weather. 
+You will also be ablet to browe pictures other travellers took.
+After viewing your trip results, you are able to save your favorite destinations, and revisit them even after you closed your browser window..
 
 ## Setup
 - Developed with node express.
