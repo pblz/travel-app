@@ -10,13 +10,17 @@ import './styles/main-classes.scss'
 import './styles/result-classes.scss'
 import './styles/result-card.scss'
 
-function triggerReload(){
+function triggerReload() {
     location.reload();
 }
 
-document.getElementById('home').addEventListener('click', triggerReload);
-document.getElementById('submit').addEventListener('click', updateUI);
-document.addEventListener("DOMContentLoaded", populateSavedTrips);
+
+document.addEventListener("DOMContentLoaded", () => {
+    populateSavedTrips();
+    //event listeners after DOM was loaded
+    document.getElementById('home').addEventListener('click', triggerReload);
+    document.getElementById('submit').addEventListener('click', updateUI);
+});
 
 export {
     updateUI,
