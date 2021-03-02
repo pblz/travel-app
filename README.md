@@ -16,13 +16,21 @@ After viewing your trip results, you are able to save your favorite destinations
 - Built with webpack.
 - Tested with jest.
 
+### Environment Variables
+The following environment variables are used and need to be provided via provess.env in order for the project to run successfully:
+GEONAMES_USERNAME=***
+WEATHERBIT_APIKEY=***
+PIXABAY_APIKEY=***
+
 ## APIs used
 Weatherbit for Weaterdata (Forecast and History)
 Geonames for converting destinations to their longitude and latitude location.
 Pixabay and Unsplash for pictures.
 
+
 ## Remarks for Review
 Saving trips is implemented via access to localstorage.
+
 
 ## Teaser
 ![Screenshot](./screenshot.png)

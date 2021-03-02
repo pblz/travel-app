@@ -34,6 +34,7 @@ app.use(express.static('dist'))
 //Routes
 app.use(require('./routes'));
 
+const errorObj = {"message": "error"};
 // designates what port the app will listen to for incoming requests
 const port = 8081;
 app.listen(port, function () {
@@ -49,7 +50,7 @@ app.post('/weather', async function (req, res) {
     } catch (error) {
         console.log("error", error);
     }
-    res.send("error")
+    res.send(errorObj)
 })
 
 app.post('/history', async function (req, res) {
@@ -62,7 +63,7 @@ app.post('/history', async function (req, res) {
     } catch (error) {
         console.log("error", error);
     }
-    res.send("error")
+    res.send(errorObj)
 })
 
 app.post('/location', async function (req, res) {
@@ -74,7 +75,7 @@ app.post('/location', async function (req, res) {
     } catch (error) {
         console.log("error", error);
     }
-    res.send("error")
+    res.send(errorObj)
 })
 
 app.get('/pictures', async function (req, res) {
@@ -85,7 +86,7 @@ app.get('/pictures', async function (req, res) {
     } catch (error) {
         console.log("error", error);
     }
-    res.send("error")
+    res.send(errorObj)
 })
 
 app.post('/pictures', async function (req, res) {
@@ -96,7 +97,7 @@ app.post('/pictures', async function (req, res) {
     } catch (error) {
         console.log("error", error);
     }
-    res.send("error")
+    res.send(errorObj)
 })
 
 module.exports = app
