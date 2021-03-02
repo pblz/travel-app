@@ -3,6 +3,7 @@ $def-padding:10px;
 /* large screen*/
  @media (min-width: 450px){
     .pic{
+        flex-wrap: wrap;
     max-height:400px;
     min-height:70vh;
     color: white;
