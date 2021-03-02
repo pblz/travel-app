@@ -10,7 +10,7 @@
 
 <body>
     <header>
-            <button onClick="Client.triggerReload(event)">Home</button>
+        <button id="home">Home</button>
     </header>
 
     <section class='pic'>
@@ -41,14 +41,14 @@
             <br> With us you can explore locations virtually.</p>
     </section>
     <section id="results-container">
-        </section>
+    </section>
     <section class='media' id="results">
 
     </section>
-    
+
     <section class='saved' id="mytrips">
-            <p>Your saved trips</p>
-        </section>
+        <p>Your saved trips</p>
+    </section>
 
     <section class='inspire'>
         <p>Browse our favorite trip destinations</p>
@@ -57,38 +57,40 @@
     <container class='card-holder'>
         <div class='insp-info' id='la'>
             Los Angeles
-            <img src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg')>
+            <img alt = "LA" src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg'>
 
         </div>
-                <div class='insp-info' id='copenhagen'>
-                        Copenhagen
-                        <img src='https://cdn.pixabay.com/photo/2018/08/14/20/36/mini-europe-3606552_960_720.jpg')>
-                   
-                </div>
+        <div class='insp-info' id='copenhagen'>
+            Copenhagen
+            <img alt = "Copenhagen" src='https://cdn.pixabay.com/photo/2018/08/14/20/36/mini-europe-3606552_960_720.jpg'>
 
-       
-        <div class='insp-info'id='rio'>
-                Rio de janeiro
-                <img src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg')>
-                    </div>   
+        </div>
+
+
+        <div class='insp-info' id='rio'>
+            Rio de janeiro
+            <img alt = "Rio" src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg' )>
+        </div>
     </container>
-    <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
-</body>
 
-<footer>
-       
- Media by  - <a href= "https://pixabay.com/" >  <img src="https://pixabay.com/static/img/logo.png">  
-</a> +
-<a href="https://unsplash.com/s/photos/news?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-    Unsplash </a> 
-</footer>
+    <footer>
+        Media by -
+        <a href="https://pixabay.com/">
+            <img src="https://pixabay.com/static/img/logo.png">
+        </a> +
+        <a href="https://unsplash.com/s/photos/news?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+            Unsplash </a>
+    </footer>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
 
 </html>

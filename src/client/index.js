@@ -14,6 +14,7 @@ function triggerReload(){
     location.reload();
 }
 
+document.getElementById('home').addEventListener('click', triggerReload);
 document.getElementById('submit').addEventListener('click', updateUI);
 document.addEventListener("DOMContentLoaded", populateSavedTrips);
 
