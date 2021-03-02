@@ -19,6 +19,7 @@ const PIXABAY_APIKEY = process.env.PIXABAY_APIKEY;
 const pixabayUrl = 'https://pixabay.com/api/';
 
 
+const storage = [];
 const app = express()
 app.use(cors())
 // to use json
@@ -30,9 +31,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('dist'))
 
-app.get('/', function (req, res) {
-    res.sendFile(path.resolve('src/client/views/index.html'))
-})
+//Routes
+app.use(require('./routes'));
 
 // designates what port the app will listen to for incoming requests
 const port = 8081;

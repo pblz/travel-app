@@ -3,7 +3,7 @@ $def-padding:10px;
 /* large screen*/
  @media (min-width: 450px){
     .pic{
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     max-height:400px;
     min-height:70vh;
     color: white;
@@ -92,7 +92,7 @@ $def-padding:10px;
 }
 
 .main-text{
-    font-size: 30px;
+    font-size: 20px;
     background-color: black;
     color:white;
     border-bottom-style: solid;
