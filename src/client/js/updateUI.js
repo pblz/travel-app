@@ -3,6 +3,7 @@ Fetch data from server side and update UI
 */
 
 function updateUI() {
+    event.preventDefault()
 
     console.log("::: Process Input:::")
 
