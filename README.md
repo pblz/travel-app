@@ -21,6 +21,8 @@ Weatherbit for Weaterdata (Forecast and History)
 Geonames for converting destinations to their longitude and latitude location.
 Pixabay and Unsplash for pictures.
 
+## Remarks for Review
+Saving trips is implemented via access to localstorage.
 
 ## Teaser
 ![Screenshot](./screenshot.png)
