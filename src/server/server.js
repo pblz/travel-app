@@ -19,7 +19,7 @@ const PIXABAY_APIKEY = process.env.PIXABAY_APIKEY;
 const pixabayUrl = 'https://pixabay.com/api/';
 
 
-const storage = [];
+
 const app = express()
 app.use(cors())
 // to use json
@@ -35,6 +35,19 @@ app.use(express.static('dist'))
 app.use(require('./routes'));
 
 const errorObj = {"message": "error"};
+
+/* 
+Define Storage Object 
+*/
+var favorites = [];
+
+/* 
+Configure Routes
+*/
+
+/* POST Route 
+- add entry to project endpoint */
+app.post('/favorite', addFavorite);
 
 app.post('/weather', async function (req, res) {
     try {
@@ -94,5 +107,11 @@ app.post('/pictures', async function (req, res) {
     }
     res.send(errorObj)
 })
+
+function addFavorite(req, res) {
+    console.log("received favorite");
+    favorites.push(req.body);
+};
+
 
 module.exports = app

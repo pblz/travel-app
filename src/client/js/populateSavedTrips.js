@@ -6,9 +6,6 @@ const fetch = require('node-fetch');
 function populateSavedTrips() {
 
     try {
-
-
-
         //Get Element by ID
         var tripElement = document.getElementById("mytrips");
 

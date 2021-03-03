@@ -40,6 +40,10 @@ $def-padding:10px;
 
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .teaser {
     flex:4;
     flex-flow: row wrap;

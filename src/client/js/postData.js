@@ -9,6 +9,7 @@ const postData = async (url = '', data = {}) => {
     });
 
     try {
+        console.log("post");
         const newData = await response.json();
         return newData;
     } catch (error) {

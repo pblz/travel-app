@@ -51,6 +51,7 @@ function updateUI() {
     let tmp = 0;
     let weatherDescription = "";
 
+
     console.log("::: Fetch location :::")
     Client.postData('http://localhost:8081/location', jsonBody)
         .then(
@@ -120,7 +121,7 @@ function updateUI() {
                 buttonContainer.appendChild(buttonSave);
                 resultContainer.appendChild(buttonContainer);
 
-                // Add listener to save trip upon click
+                // Add listener to save trip to browserStorage upon click
                 buttonSave.addEventListener('click', () => {
                     var storedTrips = JSON.parse(localStorage.getItem("trips"));
     
@@ -134,6 +135,7 @@ function updateUI() {
                     alert("trip saved");
                   });
 
+            
 
                 //Fetch Pictures for location
                 let tags = "";
@@ -160,7 +162,15 @@ function updateUI() {
                                 resultBox.appendChild(picBox);
                             }
                         })
+                
             });
+            document.getElementsByClassName('hidden')[0].classList.remove("hidden");
+
+            document.getElementsByClassName('favorites')[0].addEventListener('click', () => {
+                alert("try favorited");
+                Client.postData('http://localhost:8081/favorite', tripObject);
+            });
+          
 }
 
 
