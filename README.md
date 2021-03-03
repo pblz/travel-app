@@ -5,11 +5,19 @@ A Udacity Frontend Webdeveloper Nanodegree Project.
 ## Story
 You can't travel but you can dream - and visit places virtually.
 
+### A virtual trip
 This app lets you plan virtual trips. 
 You enter a destination, and a start date for your trip - any date between today and the coming year will work.
 Your trip view will include the current weather forecast, or a prediction based on previous years' weather. 
-You will also be ablet to browe pictures other travellers took.
-After viewing your trip results, you are able to save your favorite destinations, and revisit them even after you closed your browser window..
+You will also be able to browe pictures other travellers took.
+
+### Saving trips
+After viewing your trip results, you are able to save your favorite destinations, and revisit them even after you closed your browser window. (This works via localstorage, but could be replaced or extended to server side storage.)
+
+### Voting for favorite destinations
+You particularly like a destination?
+Vote for it to be added to the website's favorites.
+A vote will send a request to the server, where data from all users and devices can be analysed.
 
 ## Setup
 - Developed with node express.
