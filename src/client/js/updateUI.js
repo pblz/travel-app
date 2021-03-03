@@ -106,10 +106,7 @@ function updateUI() {
                 const weatherDiv = document.createElement("div");
                 weatherDiv.classList.add("weather");
                 weatherDiv.innerHTML = "Weather Forecast : " + weatherDescription + "  " + tmp + " °C";
-                const buttonContainer = document.createElement("div");
                 
-                // Container for Save button
-                buttonContainer.classList.add('result-form');
                 const buttonSave = document.createElement("button");
                 buttonSave.innerHTML = "Save trip";
                 buttonSave.id = "save";
@@ -117,9 +114,9 @@ function updateUI() {
                 resultContainer.innerHTML = "";
                 resultContainer.classList.add("result-container");
 
+                resultContainer.appendChild(buttonSave);
                 resultContainer.appendChild(weatherDiv);
-                buttonContainer.appendChild(buttonSave);
-                resultContainer.appendChild(buttonContainer);
+                
 
                 // Add listener to save trip to browserStorage upon click
                 buttonSave.addEventListener('click', () => {

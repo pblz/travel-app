@@ -29,8 +29,6 @@ $def-padding:10px;
     background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
 }
 
-
-
 .title {
     display: flex;
     //min-height: 170px;
@@ -55,40 +53,9 @@ $def-padding:10px;
 }
 
 .weather {
-    flex:60%;
     color:white;
-    min-height: 150px;
     padding:50px;
     font-size:30px;
-}
-
-.result-form {
-    display:flex;
-    flex-direction: column;
-    flex:30%;
-    padding:30px;
-
-    button{
-        border: aqua solid thin;
-        border-radius:6px;
-        margin: 12px;
-        padding: 12px;
-        background-color: black;
-        color: white;
-        flex: 100%;
-        max-height:20%;
-        min-height: fit-content
-    }
-
-    button:hover{
-        background-color: aqua;
-    }
-}
-
-.result-container {
-    display: flex;
-    background-color: black;
-    align-content: center
 }
 
 .teaser2 {
@@ -110,17 +77,14 @@ $def-padding:10px;
     background-color: black;
     color:white;
     flex-direction: row;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
+    align-content: center;
 }
 .inspire {
     color:white;
     display: flex;
     background-color: black;
-    font-size: 30px;
     padding: 20px;
-
-    
 }
 .card-holder {
     display: flex;
@@ -131,7 +95,6 @@ $def-padding:10px;
     background-color: black;
     color:white;
     border-bottom-style: solid;
-    border-color: white;
     border-width: thin;
 }
 

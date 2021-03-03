@@ -1,16 +1,14 @@
 .weather {
-    flex:60%;
     color:white;
-    min-height: 150px;
-    padding:50px;
-    font-size:30px;
+    padding:20px;
+    font-size:20px;
+    color:aqua
 }
-
-.result-form {
-    display:flex;
+.result-container {
+    display: flex;
     flex-direction: column;
-    flex:30%;
-    padding:30px;
+    background-color: black;
+    align-content: center;
 
     button{
         border: aqua solid thin;
@@ -29,15 +27,21 @@
     }
 }
 
+.result-form {
+    display:flex;
+    flex-direction: column;
+    padding:30px;
+}
+
 .results-box{
+    align-content: center;
     padding-left:10px;
         display: flex;
         flex-direction: column;
         grid-area: auth;
         margin: 10px;
         max-width: 30%;
-        max-height: 30%;
-
+        max-height: 25%;
         img{
             width:auto;
             height:auto;

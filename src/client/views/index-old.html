@@ -11,68 +11,72 @@
 <body>
     <header>
         <button id="home">Home</button>
-        <button class="favorites hidden">Vote this destination as Favorite!</button>
+        <button class="favorites hidden" >Vote this destination as Favorite!</button>
     </header>
 
-    <div class='pic'>
-        <div class="title"> </div>
-        <div class='container'>
-            <div class='teaser'>
-            </div>
+    <section class='pic'>
+        <section>
+            <div class="title"> </div>
+        </section>
+        <main class='container'>
+            <div></div>
+            <section class='teaser'>
+            </section>
             <form id='input-form'>
                 <label id='input-label' for="destination">Enter a destination</label>
                 <input type="text" id="destination" name="destination">
-                <label for="tripdate">Enter a trip date</label>
+                <label for="start">Enter a trip date</label>
                 <input type="date" id="tripdate" name="trip-start" value="2021-03-03" min="2020-01-02" max="2033-12-31">
                 <button id="submit">Submit</button>
             </form>
 
-            <div class='teaser2'>
-            </div>
+            <section class='teaser2'>
+            </section>
 
-        </div>
-    </div>
-    <section class='main-text'>
-        <h1>No travels due to Covid? No problem.
-            <br> With us you can explore locations virtually.</h1>
+        </main>
+
     </section>
-    <div id="results-container">
-    </div>
-    <div class='media' id="results">
-    </div>
+    <section class='main-text'>
+        <p>No travels due to Covid? No problem.
+            <br> With us you can explore locations virtually.</p>
+        </section>
+    <section id="results-container">
+    </section>
+    <section class='media' id="results">
+
+    </section>
 
     <section class='saved' id="mytrips">
-        <h2 class="paddedText"> Saved Trips
-        </h2>
+        <p>Your saved trips</p>
     </section>
 
     <section class='inspire'>
-        <h2 class="paddedText">
-           Browse our favorite trip destinations
-        </h2>
+        <p>Browse our favorite trip destinations</p>
     </section>
 
-    <div class='card-holder'>
+    <container class='card-holder'>
         <div class='insp-info' id='la'>
-            <h3> Los Angeles</h3>
-            <img alt="LA" src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg'>
+            Los Angeles
+            <img alt = "LA" src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg'>
 
         </div>
         <div class='insp-info' id='copenhagen'>
-            <h3>Copenhagen</h3>
-            <img alt="Copenhagen" src='https://cdn.pixabay.com/photo/2018/08/14/20/36/mini-europe-3606552_960_720.jpg'>
+            Copenhagen
+            <img alt = "Copenhagen" src='https://cdn.pixabay.com/photo/2018/08/14/20/36/mini-europe-3606552_960_720.jpg'>
 
         </div>
+
+
         <div class='insp-info' id='rio'>
-            <h3> Rio de janeiro</h3>
-            <img alt="Rio" src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg'>
+            Rio de janeiro
+            <img alt = "Rio" src='https://cdn.pixabay.com/photo/2016/08/30/11/49/beach-1630458_960_720.jpg' )>
         </div>
-    </div>
+    </container>
 
     <footer>
         Media by -
         <a href="https://pixabay.com/">
-            <img alt="pixabay logo" src="https://pixabay.com/static/img/logo.png">
+            <img src="https://pixabay.com/static/img/logo.png">
         </a> +
         <a href="https://unsplash.com/s/photos/news?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
             Unsplash </a>
